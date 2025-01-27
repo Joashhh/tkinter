@@ -1,4 +1,7 @@
 import tkinter
 
-root = tk.Tk()
-root.title("CCT")
+window = Tk()
+window.geometry("420x420")
+window.title("CCT)
+window.config(background="#e0f9ff")
+window.mainloop()
