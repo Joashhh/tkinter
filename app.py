@@ -7,7 +7,9 @@ window.title("CCT")
 window.config(background="#e0f9ff")
 window.mainloop()
 
-             
+with open('idk.yaml', 'r') as file:
+  app = yaml.safe_load(file)
+  
 mainframe = ttk.Frame(root, padding="3 3 12 12")
 mainframe.grid(column=0, row=0, sticky=(N, W, E, S))
 root.columnconfigure(0, weight=1)
