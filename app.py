@@ -28,8 +28,17 @@ def flag_input():
   user_input = flag_textbox.get("1.0", tk.END).strip()
   if user_input:
     if user_input == flag: 
-      messagebox.showinfo("Flag", "Correct flag entered!")
+      flag_message.showinfo("Flag", "Correct flag entered!")
     else:
-      messagebox.showerror("Flag", "Incorrect flag. Try again.")
+      flag_message.showerror("Flag", "Incorrect flag. Try again.")
 
-
+def run_bash_command():
+    try:
+        bash_message = subprocess.run(['ls', '/nonexistent_directory'], capture_output=True, text=True)
+        
+        if bash_message.returncode != 0:  # If the command failed
+            messagebox.showerror("Error", f"Command failed with error: {result.stderr}")
+        else:
+            messagebox.showinfo("Bash Output", result.stdout)
+    except Exception as e:
+        messagebox.showerror("Error", f"Error: {e}")
