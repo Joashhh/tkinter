@@ -3,7 +3,7 @@ from tkinter import ttk
 
 window = Tk()
 window.geometry("420x420")
-window.title("CCT)
+window.title("CCT")
 window.config(background="#e0f9ff")
 window.mainloop()
 
@@ -24,13 +24,10 @@ def confirm_action():
 
 def flag_input():
   user_input = flag_textbox.get("1.0", tk.END).strip()
-             
-             
-             
-   if user_input:
-        if user_input == flag: 
-             messagebox.showinfo("Flag", "Correct flag entered!")
-        else:
-            messagebox.showerror("Flag", "Incorrect flag. Try again.")
+  if user_input:
+    if user_input == flag: 
+      messagebox.showinfo("Flag", "Correct flag entered!")
+    else:
+      messagebox.showerror("Flag", "Incorrect flag. Try again.")
 
 
