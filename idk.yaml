@@ -1,0 +1,44 @@
+name: Syllabus
+hooks:
+  pre: ""
+  post: ""
+  cleanup: ""
+tasks:
+- name: Confirm
+  type: confirm
+  hooks:
+    pre: ""
+    post: ""
+    cleanup: ""
+  text: ""
+- name: Flag
+  type: flag
+  hooks:
+    pre: ""
+    post: ""
+    cleanup: ""
+  text: ""
+  flag: ""
+- name: Auto
+  type: auto
+  hooks:
+    pre: ""
+    post: ""
+    cleanup: ""
+  text: ""
+  wincond: ""
+- name: Chapter
+  type: chapter
+  hooks:
+    pre: ""
+    post: ""
+    cleanup: ""
+  tasks:
+  - name: Auto
+    type: auto
+    hooks:
+      pre: ""
+      post: ""
+      cleanup: ""
+    text: ""
+    wincond: ""
