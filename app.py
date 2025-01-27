@@ -2,12 +2,6 @@ from tkinter import *
 import yaml
 import subprocesses
 
-window = Tk()
-window.geometry("420x420")
-window.title("CCT")
-window.config(background="#e0f9ff")
-window.mainloop()
-
 with open('idk.yaml', 'r') as file:
   app = yaml.safe_load(file)
   
@@ -43,3 +37,10 @@ def run_bash_command():
             messagebox.showinfo("Bash Output", result.stdout)
     except Exception as e:
         messagebox.showerror("Error", f"Error: {e}")
+
+
+window = Tk()
+window.geometry("420x420")
+window.title("CCT")
+window.config(background="#e0f9ff")
+window.mainloop()
